@@ -1,0 +1,34 @@
+@font-face {
+  font-family: Volvo Novum;
+  src: url(../../public/fonts/VolvoNovum-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Volvo Novum, Arial, sans-serif;
+  background-color: var(--theme-background);
+  color: var(--theme-color);
+  transition: 1.5s;
+  /* min-height: 100vh; */
+}
+
+:root {
+  --theme-background: white;
+  --theme-color: black;
+}
