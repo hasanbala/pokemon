@@ -1,24 +1,8 @@
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-export const PokemonDetail = (props: Props) => {
-  // useEffect(() => {
-  //   setLoading(true);
-  //   getPokemonDetails(props.url)
-  //     .then((res) => setPokemonDetails(res))
-  //     .catch((err) => console.log(err))
-  //     .finally(() => setLoading(false));
-  // }, [props.url]);
+export const PokemonDetail = () => {
+  const { id } = useParams();
 
-  return <div></div>;
+  return <div>csdcsdc</div>;
 };
-
-interface Props {
-  id: number;
-  pageCount: number;
-  title: string;
-  description: string;
-  thumbnail: {
-    path: string;
-    extension: string;
-  };
-}

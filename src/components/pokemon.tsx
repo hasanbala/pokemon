@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchPokemonDetails } from "api";
 import { IPokemonDetails } from "types";
-import "styles/home.css";
+import "styles/pokemon.scss";
 
 export const Pokemon = (props: Props) => {
   const [pokemonDetails, setPokemonDetails] = useState<IPokemonDetails[]>();
@@ -36,7 +36,7 @@ export const Pokemon = (props: Props) => {
         loading ? (
           loader()
         ) : (
-          <Link to="/details" key={pokemon.id}>
+          <Link to={`details/${pokemon.id}`} key={pokemon.id}>
             <div className="column-images">
               <img
                 src={pokemon.sprites.other.dream_world.front_default}

@@ -17,15 +17,13 @@ html {
   scroll-behavior: smooth;
   background: var(--theme-background);
   color: var(--theme-color);
+  transition: 0.3s;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: Volvo Novum, Arial, sans-serif;
-}
-
-:root {
-  --theme-background: white;
-  --theme-color: black;
+  background-color: var(--theme-background);
+  color: var(--theme-color);
+  transition: 0.3s;
 }

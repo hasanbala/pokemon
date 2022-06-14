@@ -2,7 +2,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { useEffect } from "react";
 import { Pokemon } from "components";
 import { useAppContext } from "context";
-import "styles/home.css";
+import "styles/pokemon.scss";
 
 export const Pokemons = () => {
   const { pokemons, getPokemons } = useAppContext();
