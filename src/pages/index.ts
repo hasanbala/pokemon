@@ -1,2 +1,2 @@
 export * from "./favorites";
-export * from "./navbar";
+export * from "./pokemons";

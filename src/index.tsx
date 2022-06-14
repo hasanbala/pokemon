@@ -1,14 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./app";
-import "./styles/index.css";
+import { PokemonContext } from "context";
+import App from "app";
+import "styles/index.css";
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
 root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <PokemonContext>
+      <App />
+    </PokemonContext>
+  </React.StrictMode>,
 );

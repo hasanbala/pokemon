@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./components/home";
-import { Navbar, Favorites } from "./pages";
+import { useState } from "react";
+import { Favorites, Pokemons } from "pages";
+import { Navbar } from "layout";
 import "./styles/app.css";
 
 interface IProps {}
@@ -14,8 +14,9 @@ const App: React.FC<IProps> = () => {
       <BrowserRouter>
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/favorites' element={<Favorites />} />
+          <Route path="/" element={<Pokemons />} />
+          <Route path="/details" element={<Pokemons />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -15,17 +15,14 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--theme-background);
+  color: var(--theme-color);
 }
 
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: Volvo Novum, Arial, sans-serif;
-  background-color: var(--theme-background);
-  color: var(--theme-color);
-  transition: 1.5s;
-  /* min-height: 100vh; */
 }
 
 :root {
