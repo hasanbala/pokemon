@@ -1,17 +1,18 @@
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useEffect } from "react";
 import { Pokemon } from "components";
-import { useAppContext } from "context";
+import { useAppDispatch, useAppSelector } from "hooks";
 import "styles/pokemon.scss";
+import { getPokemons } from "features";
 
 export const Pokemons = () => {
-  const { pokemons, getPokemons } = useAppContext();
-  useEffect(() => {
-    getPokemons();
-    console.log("sjdkvlsjk");
-  }, []);
+  const pokemons = useAppSelector((state) => state.pokemons);
+  const dispatch = useAppDispatch();
 
-  console.log(pokemons);
+  useEffect(() => {
+    dispatch(getPokemons());
+  }, [dispatch]);
+
   return (
     <div className="products">
       <div className="products-sub">
@@ -23,7 +24,7 @@ export const Pokemons = () => {
           loader={<h4>{""}</h4>}>""
         </InfiniteScroll> */}
         <div className="products-caption">
-          {pokemons?.map((pokemon) => (
+          {pokemons.data?.map((pokemon) => (
             <Pokemon key={pokemon.url} name={pokemon.name} url={pokemon.url} />
           ))}
         </div>

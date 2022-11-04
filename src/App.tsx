@@ -1,21 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
-import { Favorites, NotFound, Pokemons } from "pages";
+import { Favorites, NotFound, PokemonDetails, Pokemons } from "pages";
 import { Navbar } from "layout";
-import { PokemonDetail } from "components";
 
-interface IProps {}
-
-const App: React.FC<IProps> = () => {
-  const [theme, setTheme] = useState<string>("");
-
+const App = () => {
   return (
-    <div className={`app ${theme}`}>
+    <div className="app">
       <BrowserRouter>
-        <Navbar theme={theme} setTheme={setTheme} />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Pokemons />} />
-          <Route path="/details/:id" element={<PokemonDetail />} />
+          <Route path="/details/:id" element={<PokemonDetails />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
